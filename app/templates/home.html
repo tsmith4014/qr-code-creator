@@ -1,0 +1,71 @@
+<!-- templates/home.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>All Forms</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #e8f0fe; /* A light blue that complements the green buttons */
+        margin: 0;
+      }
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        background: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      div {
+        display: flex;
+        flex-direction: column;
+      }
+      input[type="text"],
+      input[type="submit"] {
+        padding: 10px;
+        margin-top: 5px;
+      }
+      input[type="submit"] {
+        background-color: #4caf50;
+        color: white;
+        cursor: pointer;
+      }
+      input[type="submit"]:hover {
+        background-color: #45a049;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="" method="post">
+      {{ form.hidden_tag() }}
+      <div>
+        {{ form.info1.label }}<br />
+        {{ form.info1(size=32) }}<br />
+        {{ form.info1_additional1.label }}<br />
+        {{ form.info1_additional1(size=32) }}<br />
+        {{ form.submit1() }}
+      </div>
+      <div>
+        {{ form.info2.label }}<br />
+        {{ form.info2(size=32) }}<br />
+        {{ form.submit2() }}
+      </div>
+      <div>
+        {{ form.info3.label }}<br />
+        {{ form.info3(size=32) }}<br />
+        {{ form.submit3() }}
+      </div>
+      <div>
+        {{ form.info4.label }}<br />
+        {{ form.info4(size=32) }}<br />
+        {{ form.submit4() }}
+      </div>
+    </form>
+  </body>
+</html>
